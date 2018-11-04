@@ -8,10 +8,11 @@ import {
   List,
   Responsive,
   Segment,
-  Button
+  Button,
+  Menu
 } from "semantic-ui-react";
 import whiteLogo from "./images/white.png";
-import logo from "./images/black.png";
+import logo from "./images/dark.png";
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
@@ -35,13 +36,6 @@ const HomepageHeading = ({ mobile }) => (
         fontWeight: "normal",
         marginTop: mobile ? "0.5em" : "1.5em"
       }}
-    />
-    <br />
-    <br />
-    <Button
-      onClick={() => (window.location.href = "http://app.tunevoter.com/signup")}
-      content="Sign Up"
-      style={{ marginBottom: mobile ? "2em" : "1em" }}
     />
   </Container>
 );
@@ -67,6 +61,27 @@ class DesktopContainer extends Component {
           style={{ minHeight: 500, padding: "1em 0em" }}
           vertical
         >
+          <Menu inverted size="medium">
+            <Menu.Item position="right">
+              <Button
+                onClick={() =>
+                  (window.location.href = "http://app.tunevoter.com/login")
+                }
+                as="a"
+              >
+                Log in
+              </Button>
+              <Button
+                onClick={() =>
+                  (window.location.href = "http://app.tunevoter.com/signup")
+                }
+                as="a"
+                style={{ marginLeft: "0.5em" }}
+              >
+                Sign Up
+              </Button>
+            </Menu.Item>
+          </Menu>
           <HomepageHeading />
         </Segment>
         {children}
@@ -123,7 +138,8 @@ const Homepage = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as="h3" style={{ fontSize: "2em" }}>
-              We help you better understand your audience
+              We help companies comprehend thier customers preferences through
+              data analytics
             </Header>
             <p style={{ fontSize: "1.33em" }}>
               We can give your company superpowers to do things that they never
@@ -145,8 +161,14 @@ const Homepage = () => (
             <Grid.Column width={3}>
               <Header inverted as="h4" content="Links" />
               <List link inverted>
-                <List.Item as="a">Contact Us</List.Item>
-                <List.Item as="a">Sign Up</List.Item>
+                <List.Item
+                  as="a"
+                  onClick={() =>
+                    (window.location.href = "http://app.tunevoter.com/signup")
+                  }
+                >
+                  Sign Up
+                </List.Item>
               </List>
             </Grid.Column>
           </Grid.Row>
