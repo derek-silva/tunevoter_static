@@ -8,7 +8,7 @@ import {
   List,
   Responsive,
   Segment,
-  Visibility
+  Button
 } from "semantic-ui-react";
 import whiteLogo from "./images/white.png";
 import logo from "./images/black.png";
@@ -20,10 +20,10 @@ const HomepageHeading = ({ mobile }) => (
       image={whiteLogo}
       inverted
       style={{
-        fontSize: mobile ? "9em" : "4em",
+        fontSize: mobile ? "4em" : "6em",
         fontWeight: "normal",
         marginBottom: 0,
-        marginTop: mobile ? "1.5em" : "3em"
+        marginTop: mobile ? "0.5em" : "0.5em"
       }}
     />
     <Header
@@ -35,6 +35,13 @@ const HomepageHeading = ({ mobile }) => (
         fontWeight: "normal",
         marginTop: mobile ? "0.5em" : "1.5em"
       }}
+    />
+    <br />
+    <br />
+    <Button
+      onClick={() => (window.location.href = "http://app.tunevoter.com/signup")}
+      content="Sign Up"
+      style={{ marginBottom: mobile ? "2em" : "1em" }}
     />
   </Container>
 );
