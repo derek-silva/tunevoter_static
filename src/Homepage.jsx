@@ -61,7 +61,7 @@ class DesktopContainer extends Component {
           style={{ minHeight: 500, padding: "1em 0em" }}
           vertical
         >
-          <Menu inverted size="medium">
+          <Menu inverted size="small">
             <Menu.Item position="right">
               <Button
                 onClick={() =>
@@ -108,6 +108,27 @@ class MobileContainer extends Component {
           style={{ minHeight: 300, padding: "1em 0em" }}
           vertical
         >
+          <Menu inverted size="small">
+            <Menu.Item position="right">
+              <Button
+                onClick={() =>
+                  (window.location.href = "http://app.tunevoter.com/login")
+                }
+                as="a"
+              >
+                Log in
+              </Button>
+              <Button
+                onClick={() =>
+                  (window.location.href = "http://app.tunevoter.com/signup")
+                }
+                as="a"
+                style={{ marginLeft: "0.5em" }}
+              >
+                Sign Up
+              </Button>
+            </Menu.Item>
+          </Menu>
           <HomepageHeading mobile />
         </Segment>
         {children}
