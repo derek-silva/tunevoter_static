@@ -28,31 +28,34 @@ const HomepageHeading = ({ mobile }) => (
         marginBottom: 0,
         marginTop: mobile ? "0.5em" : "0.5em",
         position: "absolute",
-        bottom: mobile ? "65%" : "65%",
-        right: mobile ? "65%" : "65%"
+        bottom: mobile ? "50%" : "65%",
+        right: mobile ? "55%" : "65%"
       }}
     />
-    <Header
-      as="h2"
-      content="Engage and Understand Your Audience"
-      inverted
-      style={{
-        fontSize: mobile ? "1.5em" : "1.7em",
-        fontWeight: "normal",
-        marginTop: mobile ? "0.5em" : "1.5em",
-        position: "absolute",
-        bottom: mobile ? "50%" : "60%",
-        right: mobile ? "60%" : "65%"
-      }}
-    />
+    {mobile ? null : (
+      <Header
+        as="h2"
+        content="Engage and Understand Your Audience"
+        inverted
+        style={{
+          fontSize: "1.7em",
+          fontWeight: "normal",
+          marginTop: "1.5em",
+          position: "absolute",
+          bottom: "60%",
+          right: "65%"
+        }}
+      />
+    )}
+
     <Button
       inverted
       color="orange"
       onClick={() => (window.location.href = "http://app.tunevoter.com/signup")}
       style={{
         position: "absolute",
-        bottom: mobile ? "40%" : "55%",
-        right: mobile ? "65%" : "65%"
+        bottom: mobile ? "35%" : "55%",
+        right: mobile ? "55%" : "65%"
       }}
     >
       Get Started For Free
