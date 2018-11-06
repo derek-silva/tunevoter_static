@@ -13,9 +13,11 @@ import {
 } from "semantic-ui-react";
 import whiteLogo from "./images/white.png";
 import logo from "./images/dark.png";
+import stage from "./images/stage.jpg";
 
 const HomepageHeading = ({ mobile }) => (
-  <Container text>
+  <div>
+    <Image style={{ backgroundSize: "cover" }} responsive src={stage} />
     <Header
       as="h1"
       image={whiteLogo}
@@ -24,7 +26,10 @@ const HomepageHeading = ({ mobile }) => (
         fontSize: mobile ? "4em" : "6em",
         fontWeight: "normal",
         marginBottom: 0,
-        marginTop: mobile ? "0.5em" : "0.5em"
+        marginTop: mobile ? "0.5em" : "0.5em",
+        position: "absolute",
+        bottom: mobile ? "65%" : "65%",
+        right: mobile ? "65%" : "65%"
       }}
     />
     <Header
@@ -34,10 +39,25 @@ const HomepageHeading = ({ mobile }) => (
       style={{
         fontSize: mobile ? "1.5em" : "1.7em",
         fontWeight: "normal",
-        marginTop: mobile ? "0.5em" : "1.5em"
+        marginTop: mobile ? "0.5em" : "1.5em",
+        position: "absolute",
+        bottom: mobile ? "50%" : "60%",
+        right: mobile ? "60%" : "65%"
       }}
     />
-  </Container>
+    <Button
+      inverted
+      color="green"
+      onClick={() => (window.location.href = "http://app.tunevoter.com/signup")}
+      style={{
+        position: "absolute",
+        bottom: mobile ? "40%" : "55%",
+        right: mobile ? "65%" : "65%"
+      }}
+    >
+      Get Started For Free
+    </Button>
+  </div>
 );
 
 HomepageHeading.propTypes = {
@@ -68,6 +88,7 @@ class DesktopContainer extends Component {
                   (window.location.href = "http://app.tunevoter.com/login")
                 }
                 as="a"
+                inverted
               >
                 Log in
               </Button>
@@ -77,6 +98,8 @@ class DesktopContainer extends Component {
                 }
                 as="a"
                 style={{ marginLeft: "0.5em" }}
+                color="green"
+                inverted
               >
                 Sign Up
               </Button>
@@ -115,6 +138,7 @@ class MobileContainer extends Component {
                   (window.location.href = "http://app.tunevoter.com/login")
                 }
                 as="a"
+                inverted
               >
                 Log in
               </Button>
@@ -124,6 +148,8 @@ class MobileContainer extends Component {
                 }
                 as="a"
                 style={{ marginLeft: "0.5em" }}
+                inverted
+                color="green"
               >
                 Sign Up
               </Button>
