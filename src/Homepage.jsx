@@ -47,7 +47,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Button
       inverted
-      color="green"
+      color="orange"
       onClick={() => (window.location.href = "http://app.tunevoter.com/signup")}
       style={{
         position: "absolute",
@@ -98,7 +98,7 @@ class DesktopContainer extends Component {
                 }
                 as="a"
                 style={{ marginLeft: "0.5em" }}
-                color="green"
+                color="orange"
                 inverted
               >
                 Sign Up
@@ -149,7 +149,7 @@ class MobileContainer extends Component {
                 as="a"
                 style={{ marginLeft: "0.5em" }}
                 inverted
-                color="green"
+                color="orange"
               >
                 Sign Up
               </Button>
