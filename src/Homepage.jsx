@@ -9,10 +9,12 @@ import {
   Responsive,
   Segment,
   Button,
-  Menu
+  Menu,
+  Icon
 } from "semantic-ui-react";
 import whiteLogo from "./images/white.png";
 import logo from "./images/dark.png";
+import tuningFork from "./images/logo.png";
 import stage from "./images/stage.jpg";
 
 const HomepageHeading = ({ mobile }) => (
